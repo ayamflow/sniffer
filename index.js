@@ -2,7 +2,9 @@
 
 var dashify = require('dashify');
 
-module.exports = new Sniffer();
+if (typeof window !== 'undefined') {
+    module.exports = new Sniffer();
+}
 
 function Sniffer() {
     var ua = navigator.userAgent.toLowerCase();
